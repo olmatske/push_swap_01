@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 13:14:09 by olmatske          #+#    #+#             */
-/*   Updated: 2025/11/26 18:46:47 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/01 20:57:29 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,28 @@
 
 // only accept strings
 
+// validate_stack/input
+// three_sort
+// 
+// stack_init
+// search_stack (validate?)
+// stack_sorted
+// stack_len
+// free_stack
+
+
 int main(int argc, char **argv)
 {
 	t_node *stack_A;
 	t_node *stack_B;
 	stack_A = NULL;
 	stack_B = NULL;
-	if (argc == 1 || (argc == 2 && !argv[1][0]))
-		return (1);
-	else if (argc == 2)
-		argv == ft_split(argv[1], ' ');
-	stack_init(&stack_A, argv + 1, argc == 2);
-	if (!stack_sorted(a));
+	// if (argc == 1 || (argc == 2 && !argv[1][0]))
+	// 	return (1);
+	// else if (argc == 2)
+	// 	argv == ft_split(argv[1], ' ');
+	stack_init(&stack_A, argv + 1);
+	if (!stack_sorted(stack_A))
 	{
 		if (stack_len(stack_A) == 2)
 			sa(&stack_A);

@@ -1,15 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swapandpush.c                                      :+:      :+:    :+:   */
+/*   stack.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/10 13:10:39 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/01 20:41:04 by olmatske         ###   ########.fr       */
+/*   Created: 2025/12/01 20:40:23 by olmatske          #+#    #+#             */
+/*   Updated: 2025/12/01 20:50:47 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// stack_init
+// search_stack (validate?)
+// stack_sorted
+// stack_len
+// free_stack
+
 #include "pushswap.h"
 
-void	ft_pop(struct)
+void	stack_init(t_node stack, char **argv)
+{
+	
+}
