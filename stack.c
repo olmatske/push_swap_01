@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 20:40:23 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/02 21:01:12 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/03 19:15:27 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,17 @@
 
 #include "pushswap.h"
 
-void	stack_init(t_node stack, char **tokens)
+void	stack_init(t_node stack, long num)
 {
 	
 }
 
-void	add_node(t_node stack, )
+void	add_node(t_node stack, long num, struct node *prev)
+{
+	t_node *curr;
+
+	curr = malloc(sizeof(t_node));
+	if (!curr)
+		return (NULL);
+	curr->
+}

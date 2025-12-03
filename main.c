@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 13:14:09 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/02 20:52:23 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/03 19:04:30 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 	t_node *stack_A;
 	t_node *stack_B;
 	char	**tokens;
-	long	nums;
+	long	num;
 
 	stack_A = NULL;
 	stack_B = NULL;
