@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 13:10:48 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/02 20:52:54 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/10 11:55:01 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,21 @@
 #include "./lib/ft_printf/ft_printf.h"
 
 
-typedef struct node {
+typedef struct s_node {
 
 	int			index;
 	int			value;
 	int			lis_flag;
-	struct node	*prev;
-	struct node	*next;
+	struct s_node	*prev;
+	struct s_node	*next;
 } t_node;
 
-int main(int argc, char **argv);
-int	input_check(char **tokens);
+int 	main(int argc, char **argv);
+int		input_check(char **tokens);
 long	ft_atol(const char *str);
+void	stack_init(t_node *stack, char **tokens, long len);
+void	add_node(t_node stack, char **tokens, long len);
+
 
 
 #endif

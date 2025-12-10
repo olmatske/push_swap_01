@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 20:54:06 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/02 20:53:06 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/09 19:00:03 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,26 +18,30 @@
 
 int	input_check(char **tokens)
 {
-	char	**tokens;
-	int	i;
-	int	k;
+	int		i;
+	int		k;
+	long	n;
 
-	i = 0;
 	k = 0;
 	while (tokens[k])
 	{
-		if (ft_isdigit(tokens[k][i]) == 1)
-			return(ft_printf("Invalid Input"), 1);
-		if (ft_atol(tokens[k]) < INT_MIN || ft_atol(tokens[k]) > INT_MAX)
-			return (ft_printf("Invalid Input, Overflow"), 1);
-		i++;
-		if(i == '\0')
+		i = 0;
+		if (tokens[k][i] == '-' || tokens[k][i] == '+')
+			i++;
+		if (!tokens[k][i])
+			return (ft_printf("Invalid input - please parse a string of numbers\n"), 1);
+		while (tokens[k][i])
 		{
-			k++;
-			i = 0;
+			if (!ft_isdigit((unsigned char)tokens[k][i]))
+				return (ft_printf("Invalid input\n"), 1);
+			i++;
 		}
+		n = ft_atol(tokens[k]);
+		if (n > INT_MAX || n < INT_MIN)
+			return (ft_printf("Invalid Input\n"), 1);
+		k++;
 	}
-	return (tokens);
+	return (0);
 }
 
 long	ft_atol(const char *str)

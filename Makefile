@@ -6,41 +6,41 @@
 #    By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/10 13:11:01 by olmatske          #+#    #+#              #
-#    Updated: 2025/11/19 14:49:07 by olmatske         ###   ########.fr        #
+#    Updated: 2025/12/10 11:55:06 by olmatske         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
-SOURCES = main.c swapandpush.c rotate.c 
+SOURCES = main.c validate.c stack.c
 
-PRINTF_DIR = ./lib/ft_printf
-PRINTF = ./lib/ft_printf/libftprintf
+PRINTF_DIR = ./lib/ft_printf/
+PRINTF_LIB = $(PRINTF_DIR)libftprintf.a
 
 OBJECTS = $(SOURCES:.c=.o)
 
 CC = cc
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -I./lib  #-Wall -Werror -Wextra
 RM = rm -rf
-INCLUDE = lib/ft_printf.h
-LIB = lib/ft_printf/libftprintf.a
 
 all: $(NAME)
 
-$(FT_PRINTF) :
-	make -C ./lib/ft_printf
+$(PRINTF_LIB):
+	make -C $(PRINTF_DIR)
 
-$(NAME): $(OBJECTS)
-	$(CC) $(CFLAGS) $(LIB) -o $(NAME) $(INCLUDE) $(OBJECTS)
+$(NAME): $(PRINTF_LIB) $(OBJECTS)
+	$(CC) $(CFLAGS) $(OBJECTS) $(PRINTF_LIB) -o $(NAME)
 
 %.o: %.c pushswap.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	$(RM) $(OBJECTS)
+	make -C $(PRINTF_DIR) clean
 
 fclean: clean
 	$(RM) $(NAME)
+	make -C $(PRINTF_DIR) fclean
 
 re:
 	$(MAKE) fclean
