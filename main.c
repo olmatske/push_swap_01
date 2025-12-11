@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 13:14:09 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/10 14:05:09 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/11 12:12:46 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,25 +28,25 @@ int main(int argc, char **argv)
 {
 	t_node *stack_A;
 	t_node *stack_B;
-	char	**tokens; // char even though tokens are numbers????
+	char	**tokens;
 	long	i;
 
 	i = 0;
 	stack_A = NULL;
 	stack_B = NULL;
 	if (argc != 2 || !argv[1][0])
-		return (ft_printf("Invalid input - Please parse a string of numbers\n\n"), 1);
+		return (ft_printf("Invalid input - Parse a string of numbers\n"), 1);
 	tokens = ft_split(argv[1], ' ');
 	if (!tokens)
-		return (ft_printf("Allocation error\n\n"));
+		return (ft_printf("Tokenization error\n\n"));
 	if (input_check(tokens) != 0)
 		return (free(tokens), ft_printf("Hurensohn Invalid Input\n\n"), 1);
 	ft_printf("Successful Input\n\n");
-	while (tokens[i])
-		ft_printf("%s\n", tokens[i++]);
-	stack_init(stack_A, tokens, i);
-	return 0;
+	stack_A = stack_init(stack_A, tokens);
+	return (0);
 }
+
+
 
 	// stack_init(&stack_A, tokens); ///////////// previously: stack_init /////////////////
 	// if (!stack_sorted(stack_A))

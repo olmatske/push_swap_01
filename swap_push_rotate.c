@@ -1,15 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swapandpush.c                                      :+:      :+:    :+:   */
+/*   swap_push_rotate.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/10 13:10:39 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/01 20:41:04 by olmatske         ###   ########.fr       */
+/*   Created: 2025/12/11 12:25:37 by olmatske          #+#    #+#             */
+/*   Updated: 2025/12/11 12:28:12 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-void	ft_pop(struct)
+t_node	*swap(t_node *stack, )
