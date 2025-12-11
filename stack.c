@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 20:40:23 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/09 16:58:40 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/10 20:08:13 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,20 +20,24 @@
 
 void	stack_init(t_node *stack, char **tokens, long len)
 {
+	
 
-	// stack = malloc(sizeof(t_node));
-	if (len >= 1)
-		stack->value = tokens[0];
-	else
-		stack->next = 0;       ///////// wtf is that //////////
-	stack->next = NULL;
+
+	printf("This is the amount of tokens we have: %ld\n", len);
+	// stack = add_node(stack, )
 }
 
-void	add_node(t_node stack, char **tokens, long len)
+t_node	*add_node(t_node *stack, char **tokens, long len)
 {
 	int	i;
 	t_node	*curr;
 	t_node	*new_node;
+	t_node	*prev;
+
+	curr = NULL;
+	prev = NULL;
+
+	stack = malloc(sizeof(t_node));
 
 	i = 0;
 	while (i < len)
@@ -44,8 +48,24 @@ void	add_node(t_node stack, char **tokens, long len)
 		new_node->lis_flag = ft_lis(tokens[i]);   /////////// need to decide on lis stuff ////////
 		while (curr->next != NULL)
 			curr = curr->next;
-		while ()
+		curr->next = new_node;
+		new_node->next = NULL;
+		i++;
 	}
+	return (stack);
+}
 
+void	list_stack(t_node *stack)
+{
+	t_node	*curr;
+	int		i;
 
+	while (curr != NULL)
+	{
+		ft_printf("%d", curr->value);
+		if (curr->next != NULL)
+			ft_printf(" -> ");
+		curr = curr->next;
+	}
+	ft_printf("\n");
 }

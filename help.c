@@ -1,9 +1,9 @@
 #include "pushswap.h"
 
-typedef struct t_node
+typedef struct s_node
 {
 	int				value;
-	struct t_node	*next;
+	struct s_node	*next;
 }					t_node;
 
 t_node	*create_and_fill(int numbers[], int len)

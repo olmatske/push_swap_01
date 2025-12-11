@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 13:14:09 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/10 11:53:39 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/10 14:05:09 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,9 @@ int main(int argc, char **argv)
 	t_node *stack_A;
 	t_node *stack_B;
 	char	**tokens; // char even though tokens are numbers????
-	int		i;
-	int		k;
+	long	i;
 
 	i = 0;
-	k = 0;
-
 	stack_A = NULL;
 	stack_B = NULL;
 	if (argc != 2 || !argv[1][0])
@@ -46,16 +43,12 @@ int main(int argc, char **argv)
 		return (free(tokens), ft_printf("Hurensohn Invalid Input\n\n"), 1);
 	ft_printf("Successful Input\n\n");
 	while (tokens[i])
-	{
-		// ft_printf("This is i: %d\nThis is k: %d\n", i, k);
-		ft_printf("%s\n", tokens[i]);
-		i++;
-	}
-	ft_printf("Amount of tokens: %d\n", i);
+		ft_printf("%s\n", tokens[i++]);
+	stack_init(stack_A, tokens, i);
 	return 0;
 }
 
-	// stack_init(&stack_A, tokens, sizeof(tokens + 1)); ///////////// previously: stack_init /////////////////
+	// stack_init(&stack_A, tokens); ///////////// previously: stack_init /////////////////
 	// if (!stack_sorted(stack_A))
 	// {
 	// 	if (stack_len(stack_A) == 2)
