@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 13:14:09 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/12 13:21:44 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/12 13:59:25 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,16 +34,16 @@ int main(int argc, char **argv)
 	i = 0;
 	stack_A = NULL;
 	stack_B = NULL;
-	if (argc != 2 || !argv[1][0])
+	if (argc != 2 || !argv[1][0] || argv[1][0] == ' ')
 		return (ft_printf("Invalid input - Parse a string of numbers\n"), 1);
 	tokens = ft_split(argv[1], ' ');
 	if (!tokens)
 		return (ft_printf("Tokenization error\n\n"));
-	if (input_check(tokens) != 0)
+	if (input_check(tokens) != 0 || no_dupes(tokens) != 0)
 		return (free(tokens), ft_printf("Hurensohn Invalid Input\n\n"), 1);
 	ft_printf("Successful Input\n\n");
 	stack_A = stack_init(stack_A, tokens);
-	wrapper_swap(&stack_A, &stack_B, 'a');
+	wrapper_swap(&stack_A, &stack_B, 's');
 	list_stack(stack_A);
 	return (0);
 }

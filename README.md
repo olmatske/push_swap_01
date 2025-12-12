@@ -1,6 +1,7 @@
 Checklist
 
 - [X] Error checking
+	- [X] No dupes!!!
 - [X] put everything in tokens
 - [X] put tokens in stack_a
 - [ ] write all the helper functions (like sa, ra etc pp)

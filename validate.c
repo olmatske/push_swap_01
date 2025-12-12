@@ -6,15 +6,11 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 20:54:06 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/09 19:00:03 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/12 14:15:46 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
-
-// validate input
-// validate stack
-// 
 
 int	input_check(char **tokens)
 {
@@ -29,16 +25,16 @@ int	input_check(char **tokens)
 		if (tokens[k][i] == '-' || tokens[k][i] == '+')
 			i++;
 		if (!tokens[k][i])
-			return (ft_printf("Invalid input - please parse a string of numbers\n"), 1);
+			return (ft_printf("Invalid input, parse a string of numbers\n"), 1);
 		while (tokens[k][i])
 		{
 			if (!ft_isdigit((unsigned char)tokens[k][i]))
-				return (ft_printf("Invalid input\n"), 1);
+				return (ft_printf("Parse a string of numbers\n"), 1);
 			i++;
 		}
 		n = ft_atol(tokens[k]);
 		if (n > INT_MAX || n < INT_MIN)
-			return (ft_printf("Invalid Input\n"), 1);
+			return (ft_printf("Out of bounds\n"), 1);
 		k++;
 	}
 	return (0);
@@ -69,4 +65,32 @@ long	ft_atol(const char *str)
 	if (check == 2)
 		res *= -1;
 	return (res);
+}
+
+int	no_dupes(char **tokens)
+{
+	long	i;
+	long	k;
+	long	len;
+
+	i = 0;
+	k = 1;
+	len = 0;
+	while (tokens[len])
+		len++;
+	while (tokens[i])
+	{
+		k = i + 1;
+		while (tokens[k])
+		{
+			if (ft_strncmp(tokens[i], tokens[k], len) == 0)
+			{
+				ft_printf("dupe found: %s\n", tokens[i]);
+				return (1);
+			}
+			k++;
+		}
+		i++;
+	}
+	return (0);
 }
