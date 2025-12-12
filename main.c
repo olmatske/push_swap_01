@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 13:14:09 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/11 12:12:46 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/12 13:21:44 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ int main(int argc, char **argv)
 		return (free(tokens), ft_printf("Hurensohn Invalid Input\n\n"), 1);
 	ft_printf("Successful Input\n\n");
 	stack_A = stack_init(stack_A, tokens);
+	wrapper_swap(&stack_A, &stack_B, 'a');
+	list_stack(stack_A);
 	return (0);
 }
 
