@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 20:54:06 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/12 14:15:46 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/12 16:52:10 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,3 +94,4 @@ int	no_dupes(char **tokens)
 	}
 	return (0);
 }
+a
