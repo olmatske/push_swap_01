@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 20:40:23 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/11 12:23:11 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/13 14:16:35 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,14 @@ t_node	*stack_init(t_node *stack, char **tokens)
 	stack_index = 0;
 	len = 0;
 	while (tokens[len])
-		ft_printf("%s\n", tokens[len++]);
+		ft_printf("%s ", tokens[len++]);
 	while (stack_index < len)
 	{
 		stack = add_node(stack, tokens, stack_index);
 		stack_index++;
 	}
-	printf("This is the amount of tokens we have: %ld\n", len);
-	list_stack(stack);
+	printf("\nThis is the amount of tokens we have: %ld\n", len);
+	// list_stack(stack);
 	return (stack);
 }
 
@@ -62,11 +62,27 @@ t_node	*add_node(t_node *stack, char **tokens, long stack_index)
 	return (stack);
 }
 
-void	list_stack(t_node *stack)
+void	list_stack_A(t_node *stack_A)
 {
 	t_node	*curr;
 
-	curr = stack;
+	curr = stack_A;
+	ft_printf("This is stack A:\n");
+	while (curr != NULL)
+	{
+		ft_printf("%d", curr->value);
+		if (curr->next != NULL)
+			ft_printf(" -> ");
+		curr = curr->next;
+	}
+	ft_printf("\n");
+}
+void	list_stack_B(t_node *stack_B)
+{
+	t_node	*curr;
+
+	curr = stack_B;
+	ft_printf("This is stack B:\n");
 	while (curr != NULL)
 	{
 		ft_printf("%d", curr->value);
