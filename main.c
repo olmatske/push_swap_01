@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 13:14:09 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/13 14:13:42 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/13 22:25:32 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int main(int argc, char **argv)
 		return (free(tokens), ft_printf("Invalid Input\n\n"), 1);
 	ft_printf("Successful Input\n\n");
 	stack_A = stack_init(stack_A, tokens);
-	wrapper_swap(&stack_A, &stack_B, 'b', 'p');
+	wrapper_swap(&stack_A, &stack_B, 'p', 'b');
 	list_stack_A(stack_A);
 	list_stack_B(stack_B);
 	return (0);

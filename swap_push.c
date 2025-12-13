@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap_push_rotate.c                                 :+:      :+:    :+:   */
+/*   swap_push.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 12:25:37 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/13 17:47:44 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/13 23:16:58 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,52 @@ void	push(t_node **pushed, t_node **dest, char flag)
 		ft_printf("How did you manage to fuck this up????\n");
 }
 
-void	wrapper_swap(t_node **stack_A, t_node **stack_B, char flag, char operation)
+void	rotate_up(t_node **stack)
+{
+	t_node	*runner;
+	t_node	*first;
+	t_node	*last;
+
+	if (!stack || !(*stack) || !(*stack)->next)   //// is head NULL || is the list empty/first node missing || head has no second node ////
+	{
+		ft_printf("Bruh\n");
+		exit(1);
+	}
+	runner = *stack;
+	first = runner->next;
+	last = *stack;
+	while (last->next)
+		last = last->next;
+	runner->prev = last;
+	runner->next = NULL;
+	first->prev = NULL;
+	last->next = runner;
+	*stack = first;
+}
+void	rotate_down(t_node **stack)
+{
+	t_node	*runner;
+	t_node	*first;
+	t_node	*last;
+
+	if (!stack || !(*stack) || !(*stack)->next)   //// is head NULL || is the list empty/first node missing || head has no second node ////
+	{
+		ft_printf("Bruh\n");
+		exit(1);
+	}
+	first = *stack;
+	runner = *stack;
+	while (runner->next)
+		runner = runner->next;
+	last = runner->prev;
+	last->next = NULL;
+	first->prev = runner;
+	runner->prev = NULL;
+	runner->next = first;
+	*stack = runner;
+}
+
+void	wrapper_swap(t_node **stack_A, t_node **stack_B, char operation, char flag)
 {
 	ft_printf("Operations:\n\n");
 	if (operation == 's' && flag == 'a')
@@ -81,10 +126,8 @@ void	wrapper_swap(t_node **stack_A, t_node **stack_B, char flag, char operation)
 		swap(stack_B);
 		ft_printf("ss\n");         //////////// This shit don't work cuz you only testing with one stack you dumbass!! ////////////
 	}
-	if (operation == 'p' && flag == 'a')
+	else if (operation == 'p' && flag == 'a')
 		push(stack_B, stack_A, 'a');
 	else if (operation == 'p' && flag == 'b')
 		push(stack_A, stack_B, 'b');
-	else
-		return;
 }

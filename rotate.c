@@ -6,7 +6,13 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 17:51:07 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/13 17:51:11 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/13 17:54:34 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "pushswap.h"
+
+void	rotate(t_node **stack)
+{
+
+}
