@@ -6,13 +6,13 @@
 #    By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/10 13:11:01 by olmatske          #+#    #+#              #
-#    Updated: 2025/12/13 17:50:39 by olmatske         ###   ########.fr        #
+#    Updated: 2025/12/15 09:23:30 by olmatske         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
-SOURCES = main.c validate.c stack.c swap_push.c
+SOURCES = main.c validate.c stack.c swap_push_rotate.c wrapper.c
 
 PRINTF_DIR = ./lib/ft_printf/
 PRINTF_LIB = $(PRINTF_DIR)libftprintf.a

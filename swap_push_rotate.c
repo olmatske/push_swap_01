@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap_push.c                                        :+:      :+:    :+:   */
+/*   swap_push_rotate.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 12:25:37 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/13 23:16:58 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/15 09:24:46 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,23 +111,28 @@ void	wrapper_swap(t_node **stack_A, t_node **stack_B, char operation, char flag)
 {
 	ft_printf("Operations:\n\n");
 	if (operation == 's' && flag == 'a')
-	{
 		swap(stack_A);
-		ft_printf("sa\n");
-	}
 	else if (operation == 's' && flag == 'b')
-	{
 		swap(stack_B);
-		ft_printf("sb\n");
-	}
 	else if (operation == 's' && flag == 's')
 	{
 		swap(stack_A);
 		swap(stack_B);
-		ft_printf("ss\n");         //////////// This shit don't work cuz you only testing with one stack you dumbass!! ////////////
 	}
 	else if (operation == 'p' && flag == 'a')
 		push(stack_B, stack_A, 'a');
 	else if (operation == 'p' && flag == 'b')
 		push(stack_A, stack_B, 'b');
+	printf("%c%c\n", operation, flag);                   //////// FIX THIS SHIT ////////
+	if (operation == 'R' && flag == 'a')
+		rotate_up(stack_A);
+	if (operation == 'R' && flag == 'b')
+		rotate_up(stack_B);
+	if (operation == 'R' && flag == 'r')
+	{
+		rotate_up(stack_A);
+		rotate_up(stack_B);
+	}
 }
+
+

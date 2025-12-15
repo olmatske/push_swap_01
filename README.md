@@ -16,15 +16,18 @@ Checklist
 	- [X] pb (push b): Take the first element at the top of a and put it at the top of b.
 
 	The first element becomes the last one.
-	- [ ] ra (rotate a): Shift up all elements of stack a by 1.
-	- [ ] rb (rotate b): Shift up all elements of stack b by 1.
-	- [ ] rr : ra and rb at the same time.
+	- [X] ra (rotate a): Shift up all elements of stack a by 1.
+	- [X] rb (rotate b): Shift up all elements of stack b by 1.
+	- [X] rr : ra and rb at the same time.
 	The last element becomes the first one.
-	- [ ] rra (reverse rotate a): Shift down all elements of stack a by 1.
-	- [ ] rrb (reverse rotate b): Shift down all elements of stack b by 1.
-	- [ ] rrr : rra and rrb at the same time.
+	- [X] rra (reverse rotate a): Shift down all elements of stack a by 1.
+	- [X] rrb (reverse rotate b): Shift down all elements of stack b by 1.
+	- [X] rrr : rra and rrb at the same time.
 
-- [ ] write the push_swap() logic
+- [ ] decide on alrogrithm
+- [ ] write algorithm logic
+- [ ] write tiny sort
+- [ ]
 
 
 

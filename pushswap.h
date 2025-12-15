@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 13:10:48 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/13 22:25:43 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/15 09:26:15 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,12 @@ void	list_stack_B(t_node *stack_B);
 ////////////// swap_push_rotate.c ///////////////////////////////////
 void	swap(t_node **stack);
 void	push(t_node **pushed, t_node **dest, char flag);
-void	wrapper_swap(t_node **stack_A, t_node **stack_B, char operation, char flag);
+void	rotate_up(t_node **stack);
+void	rotate_down(t_node **stack);
 
+////////////// wrapper.c //////////////////////////////////////////////
+void	wrapper(t_node **stack_A, t_node **stack_B, char operation, char flag);
+void	wrapper_rotate(t_node **stack_A, t_node **stack_B, char operation, char flag);
 
 
 #endif
