@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 12:25:37 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/15 09:24:46 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/15 16:10:42 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,24 +36,24 @@ void	swap(t_node **stack)
 }
 
 ////////// needs a wrapper to determine pushed and dest!! //////////
-void	push(t_node **pushed, t_node **dest, char flag)
+void	push(t_node **from, t_node **to, char flag)
 {
 	t_node	*tmp;
 
-	if (!pushed || !(*pushed))
+	if (!from || !(*from))
 	{
 		ft_printf("Bruh\n");
 		exit(1);
 	}
-	tmp = *pushed;
-	*pushed = tmp->next;
-	if (*pushed)
-		(*pushed)->prev = NULL;
+	tmp = *from;
+	*from = tmp->next;
+	if (*from)
+		(*from)->prev = NULL;
 	tmp->prev = NULL;
-	tmp->next = *dest;
-	if (*dest)
-		(*dest)->prev = tmp;
-	*dest = tmp;
+	tmp->next = *to;
+	if (*to)
+		(*to)->prev = tmp;
+	*to = tmp;
 	if (flag == 'a')
 		ft_printf("pa\n");
 	else if (flag == 'b')

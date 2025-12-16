@@ -24,10 +24,21 @@ Checklist
 	- [X] rrb (reverse rotate b): Shift down all elements of stack b by 1.
 	- [X] rrr : rra and rrb at the same time.
 
-- [ ] decide on alrogrithm
+- [X] decide on alrogrithm
 - [ ] write algorithm logic
-- [ ] write tiny sort
-- [ ]
+	- [ ] 
+	- [ ] bitwise operation functions
+- [ ] write tiny sort ( for less than 7 numbers)
+- [ ] Writing radix_sort as in the previous example, integrating withyour existing stacks and indices
+- [ ] Testing against a push_swap checker (random 10/100/500 cases, leaks, edge cases like already sorted, reverse sorted, duplicates rejected before)
+
+.
+
+
+
+ value:         142 74 18 97 4 3
+ index:          0               
+ index:          1  0             n = 
 
 
 

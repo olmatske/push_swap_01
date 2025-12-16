@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 20:40:23 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/13 14:16:35 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/16 16:26:30 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,19 @@
 // need to reassign the stack indexes when changing the stack!! or something like that idk
 
 #include "pushswap.h"
+
+int	stack_len(t_node *stack)
+{
+	int	len;
+
+	len = 0;
+	while (stack)
+	{
+		stack = stack->next;
+		len++;
+	}
+	return (len);
+}
 
 t_node	*stack_init(t_node *stack, char **tokens)
 {
@@ -47,7 +60,7 @@ t_node	*add_node(t_node *stack, char **tokens, long stack_index)
 	new_node = malloc(sizeof(t_node));
 	if (!new_node)
 		return (ft_printf("Allocation failed while allocating new node.\n"), stack);
-	new_node->index = stack_index;
+	new_node->index = -1;
 	new_node->value = ft_atol(tokens[stack_index]);
 	// new_node->lis_flag = test;
 	new_node->next = NULL;
