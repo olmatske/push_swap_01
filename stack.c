@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 20:40:23 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/16 16:26:30 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/17 16:12:39 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ void	list_stack_A(t_node *stack_A)
 	t_node	*curr;
 
 	curr = stack_A;
-	ft_printf("This is stack A:\n");
+	ft_printf("This is stack: ");
 	while (curr != NULL)
 	{
 		ft_printf("%d", curr->value);
@@ -89,6 +89,7 @@ void	list_stack_A(t_node *stack_A)
 		curr = curr->next;
 	}
 	ft_printf("\n");
+	list_index(stack_A);
 }
 void	list_stack_B(t_node *stack_B)
 {

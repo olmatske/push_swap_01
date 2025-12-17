@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 13:10:48 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/16 16:36:21 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/17 16:12:48 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,8 @@ void	wrapper_rotate(t_node **stack_A, t_node **stack_B, char operation, char fla
 
 ////////////// index_sort.c //////////////////////////////////////////////
 void	i_sort(t_node *stack);
-int	find_smallest(t_node *stack, int smallest);
+int	find_smallest(t_node *stack);
+void	list_index(t_node *stack);
 
 ////////////// bitwise.c //////////////////////////////////////////////
 

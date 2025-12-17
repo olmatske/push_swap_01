@@ -4,7 +4,7 @@ Checklist
 - [X] No dupes!!!
 - [X] put everything in tokens
 - [X] put tokens in stack_a
-- [ ] write all the helper functions (like sa, ra etc pp)
+- [X] write all the helper functions (like sa, ra etc pp)
 
 	Do nothing if there is only one element or none.
 	- [X] sa (swap a): Swap the first 2 elements at the top of stack a.
@@ -25,20 +25,13 @@ Checklist
 	- [X] rrr : rra and rrb at the same time.
 
 - [X] decide on alrogrithm
+- [X] write indexer
 - [ ] write algorithm logic
-	- [ ] 
 	- [ ] bitwise operation functions
 - [ ] write tiny sort ( for less than 7 numbers)
 - [ ] Writing radix_sort as in the previous example, integrating withyour existing stacks and indices
 - [ ] Testing against a push_swap checker (random 10/100/500 cases, leaks, edge cases like already sorted, reverse sorted, duplicates rejected before)
 
-.
-
-
-
- value:         142 74 18 97 4 3
- index:          0               
- index:          1  0             n = 
 
 
 
