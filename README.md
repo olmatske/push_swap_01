@@ -28,9 +28,9 @@ Checklist
 - [X] write indexer
 - [ ] write algorithm logic
 	- [ ] bitwise operation functions
+	- [ ] write radix logic
 - [ ] write tiny sort ( for less than 7 numbers)
-- [ ] Writing radix_sort as in the previous example, integrating withyour existing stacks and indices
-- [ ] Testing against a push_swap checker (random 10/100/500 cases, leaks, edge cases like already sorted, reverse sorted, duplicates rejected before)
+- [ ] test against a push_swap checker (random 10/100/500 cases, leaks, edge cases like already sorted, reverse sorted, duplicates rejected before)
 
 
 
