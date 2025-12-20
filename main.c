@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 13:14:09 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/16 16:33:29 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/20 12:14:09 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,22 @@ int main(int argc, char **argv)
 		return (free(tokens), ft_printf("Invalid Input\n\n"), 1);
 	ft_printf("Successful Input\n\n");
 	stack_A = stack_init(stack_A, tokens);
+
 	i_sort(stack_A);
+
+
+	ft_printf("Before sort:\n");
+	list_stack_A(stack_A);
+	ft_printf("After sort:\n");
+	if (stack_len(stack_A) == 5)
+		five_sort(&stack_A, &stack_B);
+	list_stack_A(stack_A);
+	
 	// ft_printf("Operations:\n\n");
 	// wrapper(&stack_A, &stack_B, 'p', 'b');
 	// wrapper(&stack_A, &stack_B, 'p', 'b');
 	// wrapper_rotate(&stack_A, &stack_B, 'r', 'r');
-	list_stack_A(stack_A);
-	list_stack_B(stack_B);
+	// list_stack_B(stack_B);
 	return (0);
 }
 

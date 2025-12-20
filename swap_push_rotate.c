@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 12:25:37 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/15 16:10:42 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/20 12:02:34 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,7 @@ void	swap(t_node **stack)
 	t_node	*tmp;
 
 	if (!stack || !(*stack) || !(*stack)->next)   //// is head NULL || is the list empty/first node missing || head has no second node ////
-	{
-		ft_printf("Bruh\n");
-		exit(1);
-	}
+		return;
 	first = *stack;
 	second = first->next;
 	tmp = second->next;

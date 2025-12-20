@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 13:49:15 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/17 16:12:23 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/20 11:24:21 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ void	i_sort(t_node *stack)
 			finder = finder->next;
 		}
 	}
-	test_func(stack);
+	// test_func(stack);
 }
 
 int	find_smallest(t_node *stack)
