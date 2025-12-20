@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 17:51:07 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/15 09:33:53 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/20 12:19:40 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,10 @@ void	wrapper_rotate(t_node **stack_A, t_node **stack_B, char operation, char fla
 		rotate_down(stack_A);
 		rotate_down(stack_B);
 	}
-	printf("%c%c\n", operation, flag);                   //////// FIX THIS SHIT ////////
+	if (operation == 'R')
+		ft_printf("r%c\n", flag);                   //////// FIX THIS SHIT ////////
+	if (operation == 'r')
+		ft_printf("rr%c\n", flag);
 }
 
 void	wrapper(t_node **stack_A, t_node **stack_B, char operation, char flag)
