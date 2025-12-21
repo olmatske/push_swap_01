@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 12:25:37 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/21 19:45:30 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/21 20:25:13 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,11 @@ void	push(t_node **from, t_node **to, char flag)
 {
 	t_node	*tmp;
 
-	list_stack_A(*from);
-	list_stack_A(*to);
+	// list_stack_A(*from);
+	// list_stack_A(*to);
 	if (!from || !(*from))
 	{
-		ft_printf("Bruh 1\n");
+		// ft_printf("Bruh 1\n");
 		return;
 	}
 	tmp = *from;
@@ -59,8 +59,8 @@ void	push(t_node **from, t_node **to, char flag)
 		ft_printf("pb\n");
 	else
 		ft_printf("How did you manage to fuck this up????\n");
-	list_stack_A(*from);
-	list_stack_A(*to);
+	// list_stack_A(*from);
+	// list_stack_A(*to);
 }
 
 void	rotate_up(t_node **stack)
@@ -71,7 +71,7 @@ void	rotate_up(t_node **stack)
 
 	if (!stack || !(*stack) || !(*stack)->next)   //// is head NULL || is the list empty/first node missing || head has no second node ////
 	{
-		ft_printf("Bruh 2\n");
+		// ft_printf("Bruh 2\n");
 		return;
 	}
 	runner = *stack;
@@ -93,7 +93,7 @@ void	rotate_down(t_node **stack)
 
 	if (!stack || !(*stack) || !(*stack)->next)   //// is head NULL || is the list empty/first node missing || head has no second node ////
 	{
-		ft_printf("Bruh 3\n");
+		// ft_printf("Bruh 3\n");
 		return;
 	}
 	first = *stack;

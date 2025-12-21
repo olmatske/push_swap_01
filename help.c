@@ -37,20 +37,20 @@ t_node	*create_and_fill(int numbers[], int len)
 
 void	compare_and_print(t_node *start_node)
 {
-	t_node	*current;
+	// t_node	*current;
 
-	current = start_node;
-	// loop to check current->value with current->next->value
-	while (current->next != NULL)
-	{
-		if (current->value < current->next->value)
-			printf("Our value %d is smaller than the next %d\n", current->value,
-				current->next->value);
-		else
-			printf("Our value %d is greater or equal than the next %d\n",
-				current->value, current->next->value);
-		current = current->next;
-	}
+	// current = start_node;
+	// // loop to check current->value with current->next->value
+	// while (current->next != NULL)
+	// {
+	// 	if (current->value < current->next->value)
+	// 		printf("Our value %d is smaller than the next %d\n", current->value,
+	// 			current->next->value);
+	// 	else
+	// 		printf("Our value %d is greater or equal than the next %d\n",
+	// 			current->value, current->next->value);
+	// 	current = current->next;
+	// }
 }
 
 // int	main(void)

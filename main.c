@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 13:14:09 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/21 19:14:43 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/21 20:23:02 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,12 @@ int main(int argc, char **argv)
 		return (ft_printf("Tokenization error\n\n"));
 	if (input_check(tokens) != 0 || no_dupes(tokens) != 0)
 		return (free(tokens), ft_printf("Invalid Input\n\n"), 1);
-	ft_printf("Successful Input\n\n");
+	// ft_printf("Successful Input\n\n");
 	stack_A = stack_init(stack_A, tokens);
 
 	// i_sort(stack_A);
 	sort_it(&stack_A, &stack_B, stack_len(stack_A));
-	list_stack_A(stack_A);
+	// list_stack_A(stack_A);
 
 
 	// ft_printf("Before sort:\n");
@@ -47,8 +47,8 @@ int main(int argc, char **argv)
 	// wrapper(&stack_A, &stack_B, 'p', 'b');
 	// wrapper(&stack_A, &stack_B, 'p', 'b');
 	// wrapper_rotate(&stack_A, &stack_B, 'r', 'r');
-	list_stack_B(stack_B);
-	is_sorted(&stack_A);
+	// list_stack_B(stack_B);
+	// is_sorted(&stack_A);
 	return (0);
 }
 

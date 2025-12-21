@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 20:40:23 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/21 18:54:28 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/21 20:24:42 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,13 +41,12 @@ t_node	*stack_init(t_node *stack, char **tokens)
 	stack_index = 0;
 	len = 0;
 	while (tokens[len])
-		ft_printf("%s ", tokens[len++]);
+		tokens[len++];
 	while (stack_index < len)
 	{
 		stack = add_node(stack, tokens, stack_index);
 		stack_index++;
 	}
-	printf("\nThis is the amount of tokens we have: %ld\n", len);
 	// list_stack(stack);
 	return (stack);
 }
@@ -59,7 +58,7 @@ t_node	*add_node(t_node *stack, char **tokens, long stack_index)
 
 	new_node = malloc(sizeof(t_node));
 	if (!new_node)
-		return (ft_printf("Allocation failed while allocating new node.\n"), stack);
+		return (stack);
 	new_node->index = -1;
 	new_node->value = ft_atol(tokens[stack_index]);
 	// new_node->lis_flag = test;
@@ -80,15 +79,15 @@ void	list_stack_A(t_node *stack_A)
 	t_node	*curr;
 
 	curr = stack_A;
-	ft_printf("This is stack: ");
+	// ft_printf("This is stack: ");
 	while (curr != NULL)
 	{
-		ft_printf("%d", curr->value);
-		if (curr->next != NULL)
-			ft_printf(" -> ");
+		// ft_printf("%d", curr->value);
+		// if (curr->next != NULL)
+		// 	ft_printf(" -> ");
 		curr = curr->next;
 	}
-	ft_printf("\n");
+	// ft_printf("\n");
 	// list_index(stack_A);
 }
 void	list_stack_B(t_node *stack_B)
@@ -96,13 +95,13 @@ void	list_stack_B(t_node *stack_B)
 	t_node	*curr;
 
 	curr = stack_B;
-	ft_printf("This is stack B:\n");
+	// ft_printf("This is stack B:\n");
 	while (curr != NULL)
 	{
-		ft_printf("%d", curr->value);
-		if (curr->next != NULL)
-			ft_printf(" -> ");
+		// ft_printf("%d", curr->value);
+		// if (curr->next != NULL)
+		// 	ft_printf(" -> ");
 		curr = curr->next;
 	}
-	ft_printf("\n");
+	// ft_printf("\n");
 }

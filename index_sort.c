@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 13:49:15 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/21 18:54:23 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/21 20:22:44 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void test_func(t_node *stack)
 	tmp = stack;
 	while(tmp)
 	{
-		ft_printf("value: %d\n", tmp->value);
-		ft_printf("index %d\n", tmp->index);
+		// ft_printf("value: %d\n", tmp->value);
+		// ft_printf("index %d\n", tmp->index);
 		tmp = tmp->next;
 	}
 }
@@ -29,15 +29,15 @@ void	list_index(t_node *stack)
 	t_node	*curr;
 
 	curr = stack;
-	ft_printf("This is index: ");
+	// ft_printf("This is index: ");
 	while (curr != NULL)
 	{
-		ft_printf("%d", curr->index);
-		if (curr->next != NULL)
-			ft_printf(" -> ");
+		// ft_printf("%d", curr->index);
+		// if (curr->next != NULL)
+		// 	ft_printf(" -> ");
 		curr = curr->next;
 	}
-	ft_printf("\n");
+	// ft_printf("\n");
 }
 
 void	i_sort(t_node *stack)
