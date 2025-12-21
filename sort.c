@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 18:15:22 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/21 20:23:37 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/21 21:02:10 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ void	radix(t_node **a, t_node **b)
 		if (is_sorted(a) == 0)
 			return;
 		stack_iterator = 0;
-		while (stack_iterator < len && *a)
+		while (stack_iterator < len`)
 		{
 			if ((*a)->index >> i & 1)
 				wrapper_rotate(a, b, 'R', 'a');

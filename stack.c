@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 20:40:23 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/21 20:24:42 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/21 20:57:59 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,15 +79,15 @@ void	list_stack_A(t_node *stack_A)
 	t_node	*curr;
 
 	curr = stack_A;
-	// ft_printf("This is stack: ");
+	ft_printf("This is stack A: ");
 	while (curr != NULL)
 	{
-		// ft_printf("%d", curr->value);
-		// if (curr->next != NULL)
-		// 	ft_printf(" -> ");
+		ft_printf("%d", curr->value);
+		if (curr->next != NULL)
+			ft_printf(" -> ");
 		curr = curr->next;
 	}
-	// ft_printf("\n");
+	ft_printf("\n");
 	// list_index(stack_A);
 }
 void	list_stack_B(t_node *stack_B)
@@ -95,13 +95,13 @@ void	list_stack_B(t_node *stack_B)
 	t_node	*curr;
 
 	curr = stack_B;
-	// ft_printf("This is stack B:\n");
+	ft_printf("This is stack B: ");
 	while (curr != NULL)
 	{
-		// ft_printf("%d", curr->value);
-		// if (curr->next != NULL)
-		// 	ft_printf(" -> ");
+		ft_printf("%d", curr->value);
+		if (curr->next != NULL)
+			ft_printf(" -> ");
 		curr = curr->next;
 	}
-	// ft_printf("\n");
+	ft_printf("\n");
 }
