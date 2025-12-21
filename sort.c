@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 18:15:22 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/21 21:02:10 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/21 21:09:48 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,16 @@ int	max_bit(t_node **stack)
 
 int	is_sorted(t_node **a)
 {
-	if (stack_len(*a) == 1)
+	t_node	*curr;
+
+	curr = (*a);
+	if (stack_len(curr) == 1)
 		return 0;
-	while (*a && (*a)->next)
+	while (curr && curr->next)
 	{
-		if ((*a)->index > (*a)->next->index)
+		if (curr->index > curr->next->index)
 			return (1);
-		(*a) = (*a)->next;
+		curr = curr->next;
 	}
 	// printf("\nCHECKPOINT is sorted\n");
 	return (0);
@@ -68,7 +71,7 @@ void	radix(t_node **a, t_node **b)
 		if (is_sorted(a) == 0)
 			return;
 		stack_iterator = 0;
-		while (stack_iterator < len`)
+		while (stack_iterator < len)
 		{
 			if ((*a)->index >> i & 1)
 				wrapper_rotate(a, b, 'R', 'a');

@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 17:51:07 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/21 20:56:53 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/21 21:11:15 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,6 @@ void	wrapper_rotate(t_node **stack_A, t_node **stack_B, char operation, char fla
 
 void	wrapper(t_node **stack_A, t_node **stack_B, char operation, char flag)
 {
-	list_stack_A(*stack_A);
-	list_stack_B(*stack_B);
 	if (operation == 'R' || operation == 'r')
 		wrapper_rotate(stack_A, stack_B, operation, flag);
 	else if (operation == 's' && flag == 'a')
@@ -60,8 +58,6 @@ void	wrapper(t_node **stack_A, t_node **stack_B, char operation, char flag)
 		push(stack_A, stack_B, 'b');
 	else
 	printf("%c%c\n", operation, flag);                   //////// FIX THIS SHIT ////////
-	list_stack_A(*stack_A);
-	list_stack_B(*stack_B);
 }
 
 
