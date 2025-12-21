@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 11:11:56 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/20 12:15:55 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/21 18:42:35 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ void	three_sort(t_node **a, t_node **b)
 	t_node	*y;
 	t_node	*z;
 
-	(void)b;
 	x = *a;
 	y = x->next;
 	z = y->next;

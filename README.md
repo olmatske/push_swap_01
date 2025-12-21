@@ -27,9 +27,14 @@ Checklist
 - [X] decide on alrogrithm
 - [X] write indexer
 - [ ] write algorithm logic
-	- [ ] bitwise operation functions
+	- [X] bitwise operation functions
 	- [ ] write radix logic
-- [ ] write tiny sort ( for less than 7 numbers)
+- [X] write tiny sort ( for 3 and 5 numbers)
+- [ ] is sorted function
+	> is value > next->value
+- [ ] ft_free
+- [ ] ft_printf fix in wrapper
+- [ ] write main
 - [ ] test against a push_swap checker (random 10/100/500 cases, leaks, edge cases like already sorted, reverse sorted, duplicates rejected before)
 
 

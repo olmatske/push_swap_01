@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 13:10:48 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/20 12:13:44 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/21 18:48:47 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ typedef struct s_node {
 
 
 ////////////// main.c ////////////////////
-int 	main(int argc, char **argv);
+int		main(int argc, char **argv);
 
 ////////////// validate.c ////////////////
 int		input_check(char **tokens);
@@ -54,7 +54,7 @@ void	wrapper_rotate(t_node **stack_A, t_node **stack_B, char operation, char fla
 
 ////////////// index_sort.c //////////////////////////////////////////////
 void	i_sort(t_node *stack);
-int	find_smallest(t_node *stack);
+int		find_smallest(t_node *stack);
 void	list_index(t_node *stack);
 
 ////////////// tiny_sort.c //////////////////////////////////////////////
@@ -62,6 +62,13 @@ void	three_sort(t_node **a, t_node **b);
 int		pos_index(t_node *a, int target);
 void	bring_to_top(t_node **a, t_node **b, int idx, int len);
 void	five_sort(t_node **a, t_node **b);
+
+////////////// sort.c //////////////////////////////////////////////
+int		max_bit(t_node **stack);
+int		is_sorted(t_node **a);
+void	sort_it(t_node **a, t_node **b, int len);
+void	radix(t_node **a, t_node **b);
+
 
 
 #endif
