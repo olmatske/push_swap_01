@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 18:15:22 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/21 19:17:14 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/21 19:50:59 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void	radix(t_node **a, t_node **b)
 
 	i = 0;
 	stack_iterator = 0;
-	len = stack_len(*a) - 1;
+	len = stack_len(*a);
 	bit = max_bit(a);
 	printf("\nCHECKPOINT radix 1 \n");
 	while(i < bit)
