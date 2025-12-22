@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 13:10:48 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/21 18:48:47 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/22 16:08:17 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,12 @@ typedef struct s_node {
 
 ////////////// main.c ////////////////////
 int		main(int argc, char **argv);
+void	free_stack(t_node **a);
+void	free_char_array(char **tokens);
+// void	free_tokens(char **tokens);
 
 ////////////// validate.c ////////////////
-int		input_check(char **tokens);
+int		input_check(int argc, char **tokens);
 long	ft_atol(const char *str);
 int		no_dupes(char **tokens);
 

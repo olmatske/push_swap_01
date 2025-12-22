@@ -32,8 +32,12 @@ Checklist
 - [X] write tiny sort ( for 3 and 5 numbers)
 - [ ] is sorted function
 	> is value > next->value
+
+
 - [ ] ft_free
+- [ ] only 1 number??
 - [ ] ft_printf fix in wrapper
+- [ ] fix input ./push_swap "2147483647 843 56544 24394 -> not finished string should give an error
 - [ ] write main
 - [ ] test against a push_swap checker (random 10/100/500 cases, leaks, edge cases like already sorted, reverse sorted, duplicates rejected before)
 

@@ -6,36 +6,34 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 20:54:06 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/12 22:38:29 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/22 16:12:21 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-int	input_check(char **tokens)
+int	input_check(int start, char **tokens)
 {
 	int		i;
-	int		k;
 	long	n;
 
-	k = 0;
-	while (tokens[k])
+	while (tokens[start])
 	{
 		i = 0;
-		if (tokens[k][i] == '-' || tokens[k][i] == '+')
+		if (tokens[start][i] == '-' || tokens[start][i] == '+')
 			i++;
-		if (!tokens[k][i])
+		if (!tokens[start][i])
 			return (ft_printf("Invalid input, parse a string of numbers\n"), 1);
-		while (tokens[k][i])
+		while (tokens[start][i])
 		{
-			if (!ft_isdigit((unsigned char)tokens[k][i]))
+			if (!ft_isdigit((unsigned char)tokens[start][i]))
 				return (ft_printf("Parse a string of numbers\n"), 1);
 			i++;
 		}
-		n = ft_atol(tokens[k]);
+		n = ft_atol(tokens[start]);
 		if (n > INT_MAX || n < INT_MIN)
 			return (ft_printf("Out of bounds\n"), 1);
-		k++;
+		start++;
 	}
 	return (0);
 }
