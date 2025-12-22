@@ -28,14 +28,17 @@ Checklist
 - [X] write indexer
 - [ ] write algorithm logic
 	- [X] bitwise operation functions
-	- [ ] write radix logic
+	- [X] write radix logic
 - [X] write tiny sort ( for 3 and 5 numbers)
-- [ ] is sorted function
+- [X] is sorted function
 	> is value > next->value
 
 
-- [ ] ft_free
+- [X] ft_free
 - [ ] only 1 number??
+- [ ] double number doesn't work if it has a 0 before it
+- [ ] are rra and ra right?
+- [ ] fsanitize flags remove and check leaks
 - [ ] ft_printf fix in wrapper
 - [ ] fix input ./push_swap "2147483647 843 56544 24394 -> not finished string should give an error
 - [ ] write main

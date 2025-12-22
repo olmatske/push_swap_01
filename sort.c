@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 18:15:22 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/21 21:09:48 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/22 18:40:59 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int	max_bit(t_node **stack)
 	max_num = stack_len(*stack);
 	while ((max_num >> max_bit))
 		max_bit++;
-	// printf("\nCHECKPOINT max bits\n");
 	return (max_bit);
 }
 
@@ -38,7 +37,6 @@ int	is_sorted(t_node **a)
 			return (1);
 		curr = curr->next;
 	}
-	// printf("\nCHECKPOINT is sorted\n");
 	return (0);
 }
 
@@ -51,7 +49,6 @@ void	sort_it(t_node **a, t_node **b, int len)
 		five_sort(a, b);
 	else
 		radix(a, b);
-	// printf("\nCHECKPOINT sort it\n");
 }
 
 void	radix(t_node **a, t_node **b)
@@ -65,7 +62,6 @@ void	radix(t_node **a, t_node **b)
 	stack_iterator = 0;
 	len = stack_len(*a);
 	bit = max_bit(a);
-	// printf("\nCHECKPOINT radix 1 \n");
 	while(i < bit)
 	{
 		if (is_sorted(a) == 0)
@@ -83,5 +79,4 @@ void	radix(t_node **a, t_node **b)
 			wrapper(a, b, 'p', 'a');
 		i++;
 	}
-	// printf("\nCHECKPOINT radix 2 \n");
 }

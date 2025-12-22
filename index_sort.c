@@ -6,39 +6,11 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 13:49:15 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/21 20:22:44 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/22 18:37:22 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
-
-void test_func(t_node *stack)
-{
-	t_node	*tmp;
-
-	tmp = stack;
-	while(tmp)
-	{
-		// ft_printf("value: %d\n", tmp->value);
-		// ft_printf("index %d\n", tmp->index);
-		tmp = tmp->next;
-	}
-}
-void	list_index(t_node *stack)
-{
-	t_node	*curr;
-
-	curr = stack;
-	// ft_printf("This is index: ");
-	while (curr != NULL)
-	{
-		// ft_printf("%d", curr->index);
-		// if (curr->next != NULL)
-		// 	ft_printf(" -> ");
-		curr = curr->next;
-	}
-	// ft_printf("\n");
-}
 
 void	i_sort(t_node *stack)
 {
@@ -57,12 +29,11 @@ void	i_sort(t_node *stack)
 	{
 		smallest = find_smallest(stack);
 		finder = stack;
-		while (finder) // until the value is the same as smallest and stack exists
+		while (finder)
 		{
 			if (finder->index == -1 && finder->value == smallest)
 			{
-				finder->index = i;
-				i++;
+				finder->index = i++;
 				break;
 			}
 			finder = finder->next;
@@ -90,9 +61,34 @@ int	find_smallest(t_node *stack)
 			}
 		}
 		finder = finder->next;
-		// while (finder->index == -1 && finder->value > smallest)
-		// smallest = finder->value;
-		// break;
 	}
 	return (smallest);
 }
+
+// void test_func(t_node *stack)
+// {
+// 	t_node	*tmp;
+
+// 	tmp = stack;
+// 	while(tmp)
+// 	{
+// 		ft_printf("value: %d\n", tmp->value);
+// 		ft_printf("index %d\n", tmp->index);
+// 		tmp = tmp->next;
+// 	}
+// }
+// void	list_index(t_node *stack)
+// {
+// 	t_node	*curr;
+
+// 	curr = stack;
+// 	ft_printf("This is index: ");
+// 	while (curr != NULL)
+// 	{
+// 		ft_printf("%d", curr->index);
+// 		if (curr->next != NULL)
+// 			ft_printf(" -> ");
+// 		curr = curr->next;
+// 	}
+// 	ft_printf("\n");
+// }

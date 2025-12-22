@@ -6,13 +6,12 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 17:51:07 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/21 21:11:15 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/22 18:42:29 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-//////     R = rotate up   ///   r = rotate down    //////
 void	wrapper_rotate(t_node **stack_A, t_node **stack_B, char operation, char flag)
 {
 	if (operation == 'R' && flag == 'a')
@@ -34,7 +33,7 @@ void	wrapper_rotate(t_node **stack_A, t_node **stack_B, char operation, char fla
 		rotate_down(stack_B);
 	}
 	if (operation == 'R')
-		ft_printf("r%c\n", flag);                   //////// FIX THIS SHIT ////////
+		ft_printf("r%c\n", flag);
 	if (operation == 'r')
 		ft_printf("rr%c\n", flag);
 }
@@ -57,7 +56,5 @@ void	wrapper(t_node **stack_A, t_node **stack_B, char operation, char flag)
 	else if (operation == 'p' && flag == 'b')
 		push(stack_A, stack_B, 'b');
 	else
-	printf("%c%c\n", operation, flag);                   //////// FIX THIS SHIT ////////
+	printf("%c%c\n", operation, flag);
 }
-
-

@@ -6,17 +6,9 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 20:40:23 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/22 15:30:39 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/22 18:43:12 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-// stack_init
-// search_stack (validate?)
-// stack_sorted
-// stack_len
-// free_stack
-
-// need to reassign the stack indexes when changing the stack!! or something like that idk
 
 #include "pushswap.h"
 
@@ -47,7 +39,6 @@ t_node	*stack_init(t_node *stack, char **tokens)
 		stack = add_node(stack, tokens, stack_index);
 		stack_index++;
 	}
-	// list_stack(stack);
 	return (stack);
 }
 
@@ -61,47 +52,45 @@ t_node	*add_node(t_node *stack, char **tokens, long stack_index)
 		return (stack);
 	new_node->index = -1;
 	new_node->value = ft_atol(tokens[stack_index]);
-	// new_node->lis_flag = test;
 	new_node->next = NULL;
 	new_node->prev = NULL; 
 	if (!stack)
-		return (new_node);         /////////// I don't even know if this is neccessary ///////////
+		return (new_node);
 	tail = stack;
-	while (tail->next)            //////////// loop to find the actual tail ////////////
+	while (tail->next)
 		tail = tail->next;
 	tail->next = new_node;
 	new_node->prev = tail;
 	return (stack);
 }
 
-void	list_stack_A(t_node *stack_A)
-{
-	t_node	*curr;
+// void	list_stack_A(t_node *stack_A)
+// {
+// 	t_node	*curr;
 
-	curr = stack_A;
-	ft_printf("This is stack A: ");
-	while (curr != NULL)
-	{
-		ft_printf("%d", curr->value);
-		if (curr->next != NULL)
-			ft_printf(" -> ");
-		curr = curr->next;
-	}
-	ft_printf("\n");
-	// list_index(stack_A);
-}
-void	list_stack_B(t_node *stack_B)
-{
-	t_node	*curr;
+// 	curr = stack_A;
+// 	ft_printf("This is stack A: ");
+// 	while (curr != NULL)
+// 	{
+// 		ft_printf("%d", curr->value);
+// 		if (curr->next != NULL)
+// 			ft_printf(" -> ");
+// 		curr = curr->next;
+// 	}
+// 	ft_printf("\n");
+// }
+// void	list_stack_B(t_node *stack_B)
+// {
+// 	t_node	*curr;
 
-	curr = stack_B;
-	ft_printf("This is stack B: ");
-	while (curr != NULL)
-	{
-		ft_printf("%d", curr->value);
-		if (curr->next != NULL)
-			ft_printf(" -> ");
-		curr = curr->next;
-	}
-	ft_printf("\n");
-}
+// 	curr = stack_B;
+// 	ft_printf("This is stack B: ");
+// 	while (curr != NULL)
+// 	{
+// 		ft_printf("%d", curr->value);
+// 		if (curr->next != NULL)
+// 			ft_printf(" -> ");
+// 		curr = curr->next;
+// 	}
+// 	ft_printf("\n");
+// }
