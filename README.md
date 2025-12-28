@@ -35,8 +35,8 @@ Checklist
 
 
 - [X] ft_free
-- [ ] only 1 number??
-- [ ] double number doesn't work if it has a 0 before it
+- [X] only 1 number??
+- [X] double number doesn't work if it has a 0 before it
 - [ ] are rra and ra right?
 - [ ] fsanitize flags remove and check leaks
 - [ ] ft_printf fix in wrapper

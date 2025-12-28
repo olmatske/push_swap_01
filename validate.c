@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 20:54:06 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/22 18:40:11 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/26 21:53:06 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,16 @@ int	input_check(int start, char **tokens)
 		if (tokens[start][i] == '-' || tokens[start][i] == '+')
 			i++;
 		if (!tokens[start][i])
-			return (ft_printf("Error\n"), 1);
+			return (1);
 		while (tokens[start][i])
 		{
 			if (!ft_isdigit((unsigned char)tokens[start][i]))
-				return (ft_printf("Error\n"), 1);
+				return (1);
 			i++;
 		}
 		n = ft_atol(tokens[start]);
 		if (n > INT_MAX || n < INT_MIN)
-			return (ft_printf("Error\n"), 1);
+			return (1);
 		start++;
 	}
 	return (0);
@@ -69,26 +69,24 @@ int	no_dupes(char **tokens)
 {
 	long	i;
 	long	k;
-	long	len;
+	long	i_num;
+	long	k_num;
 
 	i = 0;
 	k = 1;
-	len = 0;
-	while (tokens[len])
-		len++;
 	while (tokens[i])
 	{
+		i_num = ft_atol(tokens[i]);
 		k = i + 1;
 		while (tokens[k])
 		{
-			if (ft_strncmp(tokens[i], tokens[k], len) == 0)
-			{
-				ft_printf("Error\n");
+			k_num = ft_atol(tokens[k]);
+			if (i_num == k_num)
 				return (1);
-			}
 			k++;
 		}
 		i++;
 	}
 	return (0);
 }
+

@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 12:25:37 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/21 20:55:43 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/26 22:33:04 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,18 +32,12 @@ void	swap(t_node **stack)
 	*stack = second;
 }
 
-////////// needs a wrapper to determine pushed and dest!! //////////
 void	push(t_node **from, t_node **to, char flag)
 {
 	t_node	*tmp;
 
-	// list_stack_A(*from);
-	// list_stack_A(*to);
 	if (!from || !(*from))
-	{
-		// ft_printf("Bruh 1\n");
 		return;
-	}
 	tmp = *from;
 	*from = tmp->next;
 	if (*from)
@@ -58,9 +52,7 @@ void	push(t_node **from, t_node **to, char flag)
 	else if (flag == 'b')
 		ft_printf("pb\n");
 	else
-		ft_printf("How did you manage to fuck this up????\n");
-	// list_stack_A(*from);
-	// list_stack_A(*to);
+		return;
 }
 
 void	rotate_up(t_node **stack)
@@ -69,11 +61,8 @@ void	rotate_up(t_node **stack)
 	t_node	*first;
 	t_node	*last;
 
-	if (!stack || !(*stack) || !(*stack)->next)   //// is head NULL || is the list empty/first node missing || head has no second node ////
-	{
-		// ft_printf("Bruh 2\n");
+	if (!stack || !(*stack) || !(*stack)->next)
 		return;
-	}
 	runner = *stack;
 	first = runner->next;
 	last = *stack;
@@ -91,11 +80,8 @@ void	rotate_down(t_node **stack)
 	t_node	*first;
 	t_node	*last;
 
-	if (!stack || !(*stack) || !(*stack)->next)   //// is head NULL || is the list empty/first node missing || head has no second node ////
-	{
-		// ft_printf("Bruh 3\n");
+	if (!stack || !(*stack) || !(*stack)->next)
 		return;
-	}
 	first = *stack;
 	runner = *stack;
 	while (runner->next)
@@ -107,33 +93,3 @@ void	rotate_down(t_node **stack)
 	runner->next = first;
 	*stack = runner;
 }
-
-void	wrapper_swap(t_node **stack_A, t_node **stack_B, char operation, char flag)
-{
-	ft_printf("Operations:\n\n");
-	if (operation == 's' && flag == 'a')
-		swap(stack_A);
-	else if (operation == 's' && flag == 'b')
-		swap(stack_B);
-	else if (operation == 's' && flag == 's')
-	{
-		swap(stack_A);
-		swap(stack_B);
-	}
-	else if (operation == 'p' && flag == 'a')
-		push(stack_B, stack_A, 'a');
-	else if (operation == 'p' && flag == 'b')
-		push(stack_A, stack_B, 'b');
-	printf("%c%c\n", operation, flag);                   //////// FIX THIS SHIT ////////
-	if (operation == 'R' && flag == 'a')
-		rotate_up(stack_A);
-	if (operation == 'R' && flag == 'b')
-		rotate_up(stack_B);
-	if (operation == 'R' && flag == 'r')
-	{
-		rotate_up(stack_A);
-		rotate_up(stack_B);
-	}
-}
-
-
