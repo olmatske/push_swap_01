@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 20:40:23 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/30 23:51:22 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/30 23:53:43 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ t_node	*stack_init(t_node *stack, char **tokens)
 		stack = add_node(stack, tokens, stack_index);
 		stack_index++;
 	}
-	free_char_array(tokens);
 	return (stack);
 }
 

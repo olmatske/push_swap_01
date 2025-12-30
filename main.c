@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 13:14:09 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/26 21:53:25 by olmatske         ###   ########.fr       */
+/*   Updated: 2025/12/30 23:59:38 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int main(int argc, char **argv)
 	sort_it(&stack_A, &stack_B, stack_len(stack_A));
 	list_stack_A(stack_A);
 	free_stack(&stack_A);
-	return (0);
+	return (free_char_array(tokens), 0);
 }
 
 void	free_stack(t_node **a)
@@ -64,4 +64,5 @@ void	free_char_array(char **tokens)
 		free(tokens[i]);
 		i++;
 	}
+	free(tokens);
 }
