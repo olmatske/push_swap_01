@@ -37,12 +37,12 @@ Checklist
 - [X] ft_free
 - [X] only 1 number??
 - [X] double number doesn't work if it has a 0 before it
-- [ ] are rra and ra right?
+- [X] are rra and ra right?
 - [ ] fsanitize flags remove and check leaks
-- [ ] ft_printf fix in wrapper
-- [ ] fix input ./push_swap "2147483647 843 56544 24394 -> not finished string should give an error
-- [ ] write main
-- [ ] test against a push_swap checker (random 10/100/500 cases, leaks, edge cases like already sorted, reverse sorted, duplicates rejected before)
+- [X] ft_printf fix in wrapper
+- [ ] fix input ./push_swap "2147483647 843 56544 24394 -> not finished string should give an error (does it really?)
+- [X] write main
+- [X] test against a push_swap checker (random 10/100/500 cases, leaks, edge cases like already sorted, reverse sorted, duplicates rejected before)
 
 
 
