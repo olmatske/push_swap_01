@@ -40,7 +40,6 @@ Checklist
 - [X] are rra and ra right?
 - [ ] fsanitize flags remove and check leaks
 - [X] ft_printf fix in wrapper
-- [ ] fix input ./push_swap "2147483647 843 56544 24394 -> not finished string should give an error (does it really?)
 - [X] write main
 - [X] test against a push_swap checker (random 10/100/500 cases, leaks, edge cases like already sorted, reverse sorted, duplicates rejected before)
 
