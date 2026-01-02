@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 12:25:37 by olmatske          #+#    #+#             */
-/*   Updated: 2026/01/02 17:23:56 by olmatske         ###   ########.fr       */
+/*   Updated: 2026/01/02 22:28:06 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	swap(t_node **stack)
 	*stack = second;
 }
 
-void	push(t_node **from, t_node **to, char flag)
+void	push(t_node **from, t_node **to)
 {
 	t_node	*tmp;
 
@@ -47,12 +47,12 @@ void	push(t_node **from, t_node **to, char flag)
 	if (*to)
 		(*to)->prev = tmp;
 	*to = tmp;
-	if (flag == 'a')
-		ft_printf("pa\n");
-	else if (flag == 'b')
-		ft_printf("pb\n");
-	else
-		return ;
+	// if (flag == 'a')
+	// 	ft_printf("pa\n");
+	// else if (flag == 'b')
+	// 	ft_printf("pb\n");
+	// else
+	// 	return ;
 }
 
 void	rotate_up(t_node **stack)

@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 17:51:07 by olmatske          #+#    #+#             */
-/*   Updated: 2026/01/02 17:27:11 by olmatske         ###   ########.fr       */
+/*   Updated: 2026/01/02 22:28:21 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,9 +53,9 @@ void	wrapper(t_node **stack_A, t_node **stack_B, char operation, char flag)
 		swap(stack_B);
 	}
 	else if (operation == 'p' && flag == 'a')
-		push(stack_B, stack_A, 'a');
+		push(stack_B, stack_A);
 	else if (operation == 'p' && flag == 'b')
-		push(stack_A, stack_B, 'b');
+		push(stack_A, stack_B);
 	if (operation == 'p')
 		ft_printf("p%c\n", flag);
 	else if (operation == 's')
