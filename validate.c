@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 20:54:06 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/26 21:53:06 by olmatske         ###   ########.fr       */
+/*   Updated: 2026/01/02 16:51:36 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,19 +65,16 @@ long	ft_atol(const char *str)
 	return (res);
 }
 
-int	no_dupes(char **tokens)
+int	no_dupes(long start, char **tokens)
 {
-	long	i;
 	long	k;
 	long	i_num;
 	long	k_num;
 
-	i = 0;
-	k = 1;
-	while (tokens[i])
+	while (tokens[start])
 	{
-		i_num = ft_atol(tokens[i]);
-		k = i + 1;
+		i_num = ft_atol(tokens[start]);
+		k = start + 1;
 		while (tokens[k])
 		{
 			k_num = ft_atol(tokens[k]);
@@ -85,7 +82,7 @@ int	no_dupes(char **tokens)
 				return (1);
 			k++;
 		}
-		i++;
+		start++;
 	}
 	return (0);
 }

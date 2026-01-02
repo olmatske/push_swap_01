@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 20:40:23 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/30 23:53:43 by olmatske         ###   ########.fr       */
+/*   Updated: 2026/01/02 17:02:34 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	stack_len(t_node *stack)
 	return (len);
 }
 
-t_node	*stack_init(t_node *stack, char **tokens)
+t_node	*stack_init(t_node *stack, char **tokens, int flag)
 {
 	long	stack_index;
 	long	len;
@@ -39,6 +39,8 @@ t_node	*stack_init(t_node *stack, char **tokens)
 		stack = add_node(stack, tokens, stack_index);
 		stack_index++;
 	}
+	if (flag == 1)
+		free_char_array(tokens);
 	return (stack);
 }
 

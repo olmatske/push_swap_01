@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 13:10:48 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/26 21:36:47 by olmatske         ###   ########.fr       */
+/*   Updated: 2026/01/02 17:02:58 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,10 @@ void	ft_error(int flag);
 ////////////// validate.c ////////////////
 int		input_check(int argc, char **tokens);
 long	ft_atol(const char *str);
-int		no_dupes(char **tokens);
+int		no_dupes(long start, char **tokens);
 
 ////////////// stack.c //////////////////////////////////////////////
-t_node	*stack_init(t_node *stack, char **tokens);
+t_node	*stack_init(t_node *stack, char **tokens, int flag);
 t_node	*add_node(t_node *stack, char **tokens, long stack_index);
 void	list_stack_A(t_node *stack_A);
 // void	list_stack_B(t_node *stack_B);

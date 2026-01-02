@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 18:15:22 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/26 22:00:11 by olmatske         ###   ########.fr       */
+/*   Updated: 2026/01/02 16:56:48 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ void	sort_it(t_node **a, t_node **b, int len)
 		five_sort(a, b);
 	else
 		radix(a, b);
+	
 }
 
 void	radix(t_node **a, t_node **b)
