@@ -1,4 +1,4 @@
-_This project had been created as part of the 42 curriculum by olmatske_
+_This project has been created as part of the 42 curriculum by olmatske_
 
 # Description
 __Project:__ Write a program that sorts numbers using two stacks and a limited set of operations, aiming to achieve the lowest possible number of actions.
