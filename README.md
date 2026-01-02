@@ -38,12 +38,12 @@ Checklist
 - [X] only 1 number??
 - [X] double number doesn't work if it has a 0 before it
 - [X] are rra and ra right?
-- [ ] fsanitize flags remove and check leaks
 - [X] ft_printf fix in wrapper
 - [X] write main
 - [X] test against a push_swap checker (random 10/100/500 cases, leaks, edge cases like already sorted, reverse sorted, duplicates rejected before)
 
 
+- [ ] fsanitize flags remove and check leaks
 
 
 
