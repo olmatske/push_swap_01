@@ -10,9 +10,9 @@ __Algorithm:__ _Radix_ sort using _bitwise operations_
 
 __Execution:__
 
-1. Checking whether input consists of ___only___ digits
-2. Checking for duplicates
-3. Initiating stack A and making a (linked) list using the parsd values
+1. Checking whether input consists of only digits - anything but digits and spaces returns an error
+2. Checking for duplicates - if any are found, program returns error
+3. Initiating stack A and making a (linked) list using the parsed values
 4. Indexing the list from 0 to n, 0 being the smallest value, n being the biggest value without actually sorting it
 5. Checking whether the list is already sorted
 	- if the list is sorted we exit the function, not putting anything out, as per Subject Requirement
