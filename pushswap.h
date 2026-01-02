@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 13:10:48 by olmatske          #+#    #+#             */
-/*   Updated: 2026/01/02 18:17:59 by olmatske         ###   ########.fr       */
+/*   Updated: 2026/01/02 19:05:36 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,5 +72,3 @@ void	sort_it(t_node **a, t_node **b, int len);
 void	radix(t_node **a, t_node **b);
 
 #endif
-
-// k sort
