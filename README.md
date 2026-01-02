@@ -15,7 +15,7 @@ __Execution:__
 3. Initiating stack A and making a (linked) list using the parsed values
 4. Indexing the list from 0 to n, 0 being the smallest value, n being the biggest value without actually sorting it
 5. Checking whether the list is already sorted
-	- if the list is sorted we exit the function, not putting anything out, as per Subject Requirement
+	- if the list is sorted we exit the program, not printing anything, as per Subject Requirement
 	- however if the list is not sorted, we initialize either one of the tiny sorts (if we have 2, 3 or 5 numbers) or the Radix sort
 6. Returning nothing but the operations or "Error" if an error occurs, exiting the program
 
