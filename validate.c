@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 20:54:06 by olmatske          #+#    #+#             */
-/*   Updated: 2026/01/02 16:51:36 by olmatske         ###   ########.fr       */
+/*   Updated: 2026/01/02 17:26:50 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,8 @@ int	input_check(int start, char **tokens)
 long	ft_atol(const char *str)
 {
 	long	res;
-	int	i;
-	int	check;
+	int		i;
+	int		check;
 
 	res = 0;
 	check = 1;
@@ -86,4 +86,3 @@ int	no_dupes(long start, char **tokens)
 	}
 	return (0);
 }
-

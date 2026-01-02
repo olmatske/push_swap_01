@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 12:25:37 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/26 22:33:04 by olmatske         ###   ########.fr       */
+/*   Updated: 2026/01/02 17:23:56 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	swap(t_node **stack)
 	t_node	*second;
 	t_node	*tmp;
 
-	if (!stack || !(*stack) || !(*stack)->next)   //// is head NULL || is the list empty/first node missing || head has no second node ////
-		return;
+	if (!stack || !(*stack) || !(*stack)->next)
+		return ;
 	first = *stack;
 	second = first->next;
 	tmp = second->next;
@@ -37,7 +37,7 @@ void	push(t_node **from, t_node **to, char flag)
 	t_node	*tmp;
 
 	if (!from || !(*from))
-		return;
+		return ;
 	tmp = *from;
 	*from = tmp->next;
 	if (*from)
@@ -52,7 +52,7 @@ void	push(t_node **from, t_node **to, char flag)
 	else if (flag == 'b')
 		ft_printf("pb\n");
 	else
-		return;
+		return ;
 }
 
 void	rotate_up(t_node **stack)
@@ -62,7 +62,7 @@ void	rotate_up(t_node **stack)
 	t_node	*last;
 
 	if (!stack || !(*stack) || !(*stack)->next)
-		return;
+		return ;
 	runner = *stack;
 	first = runner->next;
 	last = *stack;
@@ -74,6 +74,7 @@ void	rotate_up(t_node **stack)
 	last->next = runner;
 	*stack = first;
 }
+
 void	rotate_down(t_node **stack)
 {
 	t_node	*runner;
@@ -81,7 +82,7 @@ void	rotate_down(t_node **stack)
 	t_node	*last;
 
 	if (!stack || !(*stack) || !(*stack)->next)
-		return;
+		return ;
 	first = *stack;
 	runner = *stack;
 	while (runner->next)

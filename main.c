@@ -6,26 +6,26 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 13:14:09 by olmatske          #+#    #+#             */
-/*   Updated: 2026/01/02 17:06:15 by olmatske         ###   ########.fr       */
+/*   Updated: 2026/01/02 17:10:43 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
-	t_node *stack_A;
-	t_node *stack_B;
+	t_node	*a;
+	t_node	*b;
 	char	**tokens;
 
-	stack_A = NULL;
-	stack_B = NULL;
+	a = NULL;
+	b = NULL;
 	tokens = NULL;
 	if (argc != 2)
 	{
 		if (input_check(1, argv) != 0 || no_dupes(1, argv) != 0)
-			return (ft_printf("Error\n"),free_stack(&stack_A), 1);
-		stack_A = stack_init(stack_A, &argv[1], 0);
+			return (ft_printf("Error\n"), free_stack(&a), 1);
+		a = stack_init(a, &argv[1], 0);
 	}
 	else
 	{
@@ -34,10 +34,10 @@ int main(int argc, char **argv)
 			return (ft_printf("Error\n"), 1);
 		if (input_check(0, tokens) != 0 || no_dupes(0, tokens) != 0)
 			return (free_char_array(tokens), ft_printf("Error\n"), 1);
-		stack_A = stack_init(stack_A, tokens, 1);
+		a = stack_init(a, tokens, 1);
 	}
-	sort_it(&stack_A, &stack_B, stack_len(stack_A));
-	return (free_stack(&stack_A), 0);
+	sort_it(&a, &b, stack_len(a));
+	return (free_stack(&a), 0);
 }
 
 void	free_stack(t_node **a)

@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 13:49:15 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/22 18:37:22 by olmatske         ###   ########.fr       */
+/*   Updated: 2026/01/02 17:29:03 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	i_sort(t_node *stack)
 	t_node	*finder;
 
 	if (!stack)
-		return;
+		return ;
 	i = 0;
 	n = stack_len(stack);
 	smallest = find_smallest(stack);
@@ -34,7 +34,7 @@ void	i_sort(t_node *stack)
 			if (finder->index == -1 && finder->value == smallest)
 			{
 				finder->index = i++;
-				break;
+				break ;
 			}
 			finder = finder->next;
 		}

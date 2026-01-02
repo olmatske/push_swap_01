@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 11:11:56 by olmatske          #+#    #+#             */
-/*   Updated: 2025/12/21 18:42:35 by olmatske         ###   ########.fr       */
+/*   Updated: 2026/01/02 17:26:16 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,22 +21,21 @@ void	three_sort(t_node **a, t_node **b)
 	x = *a;
 	y = x->next;
 	z = y->next;
-	if (x->index > y->index && y->index < z->index && x->index < z->index)	// 1 0 2
+	if (x->index > y->index && y->index < z->index && x->index < z->index)
 		wrapper(a, b, 's', 'a');
-	x = *a; y = x->next; z = y->next;
-	if (x->index > y->index && y->index > z->index)	// 2 1 0
+	if (x->index > y->index && y->index > z->index)
 	{
 		wrapper(a, b, 's', 'a');
 		wrapper_rotate(a, b, 'r', 'a');
 	}
-	else if (x->index > y->index && y->index < z->index && x->index > z->index)	// 2 0 1
+	else if (x->index > y->index && y->index < z->index && x->index > z->index)
 		wrapper_rotate(a, b, 'R', 'a');
-	else if (x->index < y->index && y->index > z->index && x->index < z->index)	// 0 2 1
+	else if (x->index < y->index && y->index > z->index && x->index < z->index)
 	{
 		wrapper(a, b, 's', 'a');
 		wrapper_rotate(a, b, 'R', 'a');
 	}
-	else if (x->index < y->index && y->index > z->index && x->index > z->index)	// 1 2 0
+	else if (x->index < y->index && y->index > z->index && x->index > z->index)
 		wrapper_rotate(a, b, 'r', 'a');
 }
 
@@ -48,7 +47,7 @@ int	pos_index(t_node *a, int target)
 	while (a)
 	{
 		if (a->index == target)
-			return(i);
+			return (i);
 		a = a->next;
 		i++;
 	}
@@ -57,7 +56,7 @@ int	pos_index(t_node *a, int target)
 
 void	bring_to_top(t_node **a, t_node **b, int idx, int len)
 {
-	int pos;
+	int	pos;
 
 	pos = pos_index(*a, idx);
 	if (pos <= len / 2)
@@ -70,7 +69,7 @@ void	bring_to_top(t_node **a, t_node **b, int idx, int len)
 
 void	five_sort(t_node **a, t_node **b)
 {
-	int len;
+	int	len;
 
 	len = stack_len(*a);
 	bring_to_top(a, b, 0, len);

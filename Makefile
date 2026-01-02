@@ -6,7 +6,7 @@
 #    By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/10 13:11:01 by olmatske          #+#    #+#              #
-#    Updated: 2025/12/30 22:47:39 by olmatske         ###   ########.fr        #
+#    Updated: 2026/01/02 17:11:17 by olmatske         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ PRINTF_LIB = $(PRINTF_DIR)libftprintf.a
 OBJECTS = $(SOURCES:.c=.o)
 
 CC = cc
-CFLAGS := -fsanitize=address -g -Wall -Werror -Wextra -I./lib
+CFLAGS := -Wall -Werror -Wextra -I./lib
 RM = rm -rf
 
 all: $(NAME)

@@ -9,7 +9,7 @@ LIBFT = ./Libft/libft.a
 OBJCS = $(SRCS:.c=.o)
 
 CC = cc
-CFLAGS = -fsanitize=address -g -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra
 RM = rm -f
 
 all: $(NAME)

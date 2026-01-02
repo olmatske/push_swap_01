@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 18:15:22 by olmatske          #+#    #+#             */
-/*   Updated: 2026/01/02 16:56:48 by olmatske         ###   ########.fr       */
+/*   Updated: 2026/01/02 17:18:59 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	is_sorted(t_node **a)
 
 	curr = (*a);
 	if (stack_len(curr) == 1)
-		return 0;
+		return (0);
 	while (curr && curr->next)
 	{
 		if (curr->index > curr->next->index)
@@ -51,7 +51,6 @@ void	sort_it(t_node **a, t_node **b, int len)
 		five_sort(a, b);
 	else
 		radix(a, b);
-	
 }
 
 void	radix(t_node **a, t_node **b)
@@ -62,13 +61,12 @@ void	radix(t_node **a, t_node **b)
 	int	bit;
 
 	i = 0;
-	stack_iterator = 0;
 	len = stack_len(*a);
 	bit = max_bit(a);
-	while(i < bit)
+	while (i < bit)
 	{
 		if (is_sorted(a) == 0)
-			return;
+			return ;
 		stack_iterator = 0;
 		while (stack_iterator < len)
 		{
@@ -78,7 +76,7 @@ void	radix(t_node **a, t_node **b)
 				wrapper(a, b, 'p', 'b');
 			stack_iterator++;
 		}
-		while(*b)
+		while (*b)
 			wrapper(a, b, 'p', 'a');
 		i++;
 	}

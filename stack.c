@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 20:40:23 by olmatske          #+#    #+#             */
-/*   Updated: 2026/01/02 17:02:34 by olmatske         ###   ########.fr       */
+/*   Updated: 2026/01/02 17:22:29 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ t_node	*add_node(t_node *stack, char **tokens, long stack_index)
 	new_node->index = -1;
 	new_node->value = ft_atol(tokens[stack_index]);
 	new_node->next = NULL;
-	new_node->prev = NULL; 
+	new_node->prev = NULL;
 	if (!stack)
 		return (new_node);
 	tail = stack;
@@ -66,7 +66,7 @@ t_node	*add_node(t_node *stack, char **tokens, long stack_index)
 	return (stack);
 }
 
-void	list_stack_A(t_node *stack_A)
+void	list_stack_a(t_node *stack_A)
 {
 	t_node	*curr;
 
