@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 18:15:22 by olmatske          #+#    #+#             */
-/*   Updated: 2026/01/02 17:18:59 by olmatske         ###   ########.fr       */
+/*   Updated: 2026/01/02 18:16:45 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ int	is_sorted(t_node **a)
 void	sort_it(t_node **a, t_node **b, int len)
 {
 	i_sort(*a);
+	if (is_sorted(a) == 0)
+		return ;
 	if (len == 2)
 		wrapper(a, b, 's', 'a');
 	if (len == 3)
