@@ -6,7 +6,7 @@
 /*   By: olmatske <olmatske@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 12:25:37 by olmatske          #+#    #+#             */
-/*   Updated: 2026/01/02 22:28:06 by olmatske         ###   ########.fr       */
+/*   Updated: 2026/01/15 19:52:17 by olmatske         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,12 +47,6 @@ void	push(t_node **from, t_node **to)
 	if (*to)
 		(*to)->prev = tmp;
 	*to = tmp;
-	// if (flag == 'a')
-	// 	ft_printf("pa\n");
-	// else if (flag == 'b')
-	// 	ft_printf("pb\n");
-	// else
-	// 	return ;
 }
 
 void	rotate_up(t_node **stack)
